@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>超酷滚动动画 - 给多动症少年的快乐网页</title>
+    <style>
+        body {
+            font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            background-color: #f0f9ff;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        h1 {
+            color: #ff4d4d;
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .section {
+            background-color: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .emoji {
+            font-size: 1.5rem;
+            margin-right: 10px;
+        }
+        
+        .moving-emoji {
+            position: absolute;
+            font-size: 2rem;
+            opacity: 0.7;
+            animation: float 5s infinite ease-in-out;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(10deg); }
+        }
+        
+        .scroll-animation {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease;
+        }
+        
+        .scroll-animation.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .svg-animation {
+            width: 100%;
+            height: 200px;
+            margin: 20px 0;
+            overflow: hidden;
+        }
+        
+        .fun-fact {
+            background-color: #e6f7ff;
+            border-left: 4px solid #1890ff;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .highlight {
+            background-color: #fffacd;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🤯 哇塞！超酷滚动动画网页 🚀</h1>
+        
+        <div class="section scroll-animation">
+            <div class="moving-emoji" style="top: 20px; left: 20px;">🌈</div>
+            <div class="moving-emoji" style="top: 50px; right: 30px;">✨</div>
+            <h2><span class="emoji">👋</span> 嘿，多动症少年！</h2>
+            <p>我知道你可能会觉得无聊，所以这个网页有<strong class="highlight">超多动画和酷炫效果</strong>！往下滚动看看会发生什么神奇的事情~</p>
+            <p>别担心注意力不集中，这里每段都很短，还有<strong class="highlight">emoji和彩色高亮</strong>帮你抓住重点！</p>
+        </div>
+        
+        <div class="svg-animation">
+            <svg viewBox="0 0 500 200" xmlns="http://www.w3.org/2000/svg">
+                <path id="motionPath" fill="none" stroke="#ddd" d="M0,100 C150,50 350,150 500,100" />
+                <circle id="movingCircle" cx="0" cy="100" r="15" fill="#ff6b6b">
+                    <animateMotion dur="5s" repeatCount="indefinite">
+                        <mpath xlink:href="#motionPath" />
+                    </animateMotion>
+                </circle>
+                <text x="250" y="50" text-anchor="middle" font-size="20" fill="#666">看我滑来滑去~</text>
+            </svg>
+        </div>
+        
+        <div class="section scroll-animation">
+            <div class="moving-emoji" style="bottom: 20px; left: 40px;">🎨</div>
+            <h2><span class="emoji">🧠</span> 多动症大脑超能力</h2>
+            <p>你知道吗？多动症其实是一种<strong class="highlight">超能力</strong>！你的大脑就像这样：</p>
+            
+            <div class="fun-fact">
+                <p>⚡ <strong>创意爆棚</strong> - 你的想法比闪电还快！</p>
+                <p>🔥 <strong>超强专注</strong> - 对喜欢的事情可以进入心流状态！</p>
+                <p>💡 <strong>问题解决者</strong> - 能看到别人看不到的解决方案！</p>
+            </div>
+        </div>
+        
+        <div class="svg-animation">
+            <svg viewBox="0 0 500 200" xmlns="http://www.w3.org/2000/svg">
+                <rect x="50" y="50" width="100" height="100" fill="#ffcc00" class="bounce">
+                    <animate attributeName="y" values="50;30;50" dur="2s" repeatCount="indefinite" />
+                </rect>
+                <rect x="200" y="50" width="100" height="100" fill="#ff6666" class="bounce">
+                    <animate attributeName="y" values="50;20;50" dur="1.5s" repeatCount="indefinite" />
+                </rect>
+                <rect x="350" y="50" width="100" height="100" fill="#66ccff" class="bounce">
+                    <animate attributeName="y" values="50;40;50" dur="2.5s" repeatCount="indefinite" />
+                </rect>
+                <text x="250" y="180" text-anchor="middle" font-size="20" fill="#666">蹦蹦跳跳的方块~</text>
+            </svg>
+        </div>
+        
+        <div class="section scroll-animation">
+            <div class="moving-emoji" style="top: 30px; right: 20px;">🚀</div>
+            <h2><span class="emoji">🤹</span> 生活小技巧</h2>
+            <p>这里有些<strong class="highlight">超实用</strong>的技巧帮你管理多动症：</p>
+            <ul>
+                <li>⏰ 用番茄钟工作法 - 25分钟专注，5分钟疯玩</li>
+                <li>📝 把大任务拆成小任务 - 像游戏关卡一样逐个击破</li>
+                <li>🎧 听白噪音 - 帮助屏蔽干扰</li>
+                <li>🏃‍♂️ 定期运动 - 释放多余能量</li>
+            </ul>
+        </div>
+        
+        <div class="svg-animation">
+            <svg viewBox="0 0 500 200" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="100" cy="100" r="40" fill="#ff9966">
+                    <animate attributeName="r" values="40;50;40" dur="3s" repeatCount="indefinite" />
+                </circle>
+                <circle cx="250" cy="100" r="40" fill="#99cc66">
+                    <animate attributeName="r" values="40;30;40" dur="2s" repeatCount="indefinite" />
+                </circle>
+                <circle cx="400" cy="100" r="40" fill="#9966cc">
+                    <animate attributeName="r" values="40;45;40" dur="4s" repeatCount="indefinite" />
+                </circle>
+                <text x="250" y="180" text-anchor="middle" font-size="20" fill="#666">呼吸动画~ 吸气~ 呼气~</text>
+            </svg>
+        </div>
+        
+        <div class="section scroll-animation">
+            <h2><span class="emoji">🎉</span> 记住！</h2>
+            <p>你的大脑不是<strong class="highlight">有问题</strong>，只是<strong class="highlight">运作方式不同</strong>！多动症可以成为你的超级力量！</p>
+            <p>现在去征服世界吧，少年！💪</p>
+            <div style="text-align: center; margin-top: 30px;">
+                <span style="font-size: 3rem;">✨</span>
+                <span style="font-size: 4rem;">🌟</span>
+                <span style="font-size: 3rem;">✨</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 滚动动画触发
+        const scrollAnimations = document.querySelectorAll('.scroll-animation');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+        
+        scrollAnimations.forEach(animation => {
+            observer.observe(animation);
+        });
+        
+        // 随机生成漂浮emoji
+        function createFloatingEmoji() {
+            const emojis = ['🐶', '🐱', '🐼', '🦄', '🐙', '🦊', '🐧', '🦖', '👾', '🤖', '🎮', '🍕', '🍔', '🍦'];
+            const emoji = document.createElement('div');
+            emoji.className = 'moving-emoji';
+            emoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+            
+            const size = Math.random() * 2 + 1;
+            emoji.style.fontSize = `${size}rem`;
+            
+            const left = Math.random() * 80 + 10;
+            const top = Math.random() * 80 + 10;
+            emoji.style.left = `${left}%`;
+            emoji.style.top = `${top}%`;
+            
+            const duration = Math.random() * 4 + 3;
+            emoji.style.animationDuration = `${duration}s`;
+            
+            document.querySelector('.container').appendChild(emoji);
+        }
+        
+        // 创建一些随机emoji
+        for (let i = 0; i < 10; i++) {
+            createFloatingEmoji();
+        }
+    </script>
+</body>
+</html>
