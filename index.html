@@ -5,10 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>超酷滚动动画 - 给多动症少年的快乐网页</title>
     <style>
-        /* ...你的CSS不变，这里省略... */
+        /* ...你的CSS不变，这里省略... */ 
+        
+    #scrollMover {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    font-size: 2.5rem;
+    z-index: 999;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s ease-out;
+}
+
     </style>
 </head>
 <body>
+    <div id="scrollMover">🚀</div>
+
     <div class="container">
         <h1>📱 地缘政治也能好玩？咱整点新鲜的 🌍</h1>
         
@@ -100,6 +114,28 @@
         for (let i = 0; i < 10; i++) {
             createFloatingEmoji();
         }
+
+    let lastScrollTop = 0;
+    const mover = document.getElementById('scrollMover');
+    let x = 0;
+    let y = 0;
+
+    window.addEventListener("scroll", () => {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        let direction = scrollTop > lastScrollTop ? 1 : -1;
+        let speed = Math.abs(scrollTop - lastScrollTop) * 0.5;
+
+        // Move in scroll direction
+        y += direction * speed;
+        x += direction * speed * 0.5;
+
+        // Apply transform
+        mover.style.transform = `translate(${x}px, ${y}px)`;
+
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For mobile bounce
+    }, false);
+
     </script>
 </body>
 </html>
