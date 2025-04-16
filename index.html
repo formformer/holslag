@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>🔥 超炸 TikTok 风东南亚国际局势！🌏</title>
+    <title>🔥 东南亚局势超炸解析！🌏</title>
     <style>
         body {
             font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
@@ -13,6 +13,7 @@
             color: #333;
             overflow-x: hidden;
             -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+            touch-action: pan-y; /* Optimize touch scrolling */
         }
         
         .container {
@@ -27,8 +28,7 @@
             text-align: center;
             font-size: 2.8rem;
             text-shadow: 3px 3px 6px rgba(0,0,0,0.2);
-            position: sticky;
-            top: 20px;
+            margin: 30px 0;
             z-index: 10;
         }
         
@@ -50,7 +50,7 @@
         .scroll-anim {
             opacity: 0;
             transform: translateY(100px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
         }
         
         .scroll-anim.visible {
@@ -61,9 +61,10 @@
         .scroll-svg {
             position: absolute;
             opacity: 0.6;
-            transition: transform 0.2s ease-out, fill 0.5s ease-out;
+            transition: transform 0.4s ease-out, fill 0.8s ease-out;
             z-index: -1;
-            will-change: transform, fill; /* Optimize for iOS */
+            will-change: transform, fill; /* Optimize for iOS/Android */
+            -webkit-transform: translateZ(0); /* Force hardware acceleration */
         }
         
         .highlight {
@@ -108,31 +109,34 @@
         }
         
         .color-shift {
-            transition: fill 0.5s ease-out;
+            transition: fill 0.8s ease-out;
+            -webkit-transition: fill 0.8s ease-out; /* For Android */
         }
         
         .floating-emoji {
             position: absolute;
             font-size: 2.5rem;
             opacity: 0.7;
-            transition: transform 0.2s ease-out;
+            transition: transform 0.4s ease-out;
+            will-change: transform;
+            -webkit-transform: translateZ(0); /* Force hardware acceleration */
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>🤯 东南亚国际局势 TikTok 爆款解析！🚀</h1>
+        <h1>🤯 东南亚局势超炸解析！🚀</h1>
         
         <div class="section scroll-anim">
-            <div class="floating-emoji" style="top: 10%; left: 5%;">🌈</div>
-            <div class="floating-emoji" style="top: 20%; right: 10%;">✨</div>
-            <h2><span class="emoji">🌏</span> Yo！东南亚咋跟大国掰手腕？😎</h2>
-            <p>东南亚的小伙伴们，面对隔壁 <strong class="highlight">中国</strong> 这个超级大佬，咋整？是抱大腿？还是拉帮结派？或者找远方的 <strong class="highlight">美国</strong> 来battle？这话题在国际关系圈子里吵翻天了！🔥</p>
+            <div class="floating-emoji" style="top: 10%; left: -10%;" data-anim-type="slide-x">🌈</div>
+            <div class="floating-emoji" style="top: 20%; right: -10%;" data-anim-type="rotate">✨</div>
+            <h2><span class="emoji">🌏</span> 嘿！东南亚咋跟大国过招？😎</h2>
+            <p>政治学家 <strong class="highlight">Jonathan Holslag</strong> 在 Knack 杂志上甩出猛料，聊东南亚咋应对隔壁 <strong class="highlight">中国</strong> 这个大佬！根据《东南亚现状》调查，2023位小伙伴、10个国家的数据，揭秘了这场国际大戏！🔥 小国是抱大腿、组团抗衡，还是找远方的 <strong class="highlight">美国</strong> 来撑腰？快往下看！</p>
             <div class="fun-fact">
-                <p>⚡ <strong>小国策略</strong>：要么跟大佬混，要么自己组团，或者喊远方大佬来平衡！</p>
-                <p>🔥 <strong>真实情况</strong>：东南亚国家心里慌得一批，既不想全靠中国，也不敢完全信美国！</p>
+                <p>⚡ <strong>核心问题</strong>：小国面对大国崛起，到底咋选边站？</p>
+                <p>🔥 <strong>调查亮点</strong>：东南亚既不想全靠中国，也不完全信美国！</p>
             </div>
-            <svg class="scroll-svg" width="150" height="150" style="top: 0; right: 0;">
+            <svg class="scroll-svg" width="150" height="150" style="top: 0; right: -150px;" data-anim-type="scale">
                 <circle cx="75" cy="75" r="50" fill="#ff6666" class="color-shift" opacity="0.5"/>
             </svg>
         </div>
@@ -140,72 +144,70 @@
         <div class="svg-container">
             <svg viewBox="0 0 600 250" xmlns="http://www.w3.org/2000/svg">
                 <path id="wavePath" fill="none" stroke="#ddd" d="M0,125 C150,50 450,200 600,125"/>
-                <circle cx="0" cy="125" r="20" fill="#ffcc00" class="scroll-svg"/>
+                <circle cx="0" cy="125" r="20" fill="#ffcc00" class="scroll-svg" data-anim-type="slide-x"/>
                 <text x="300" y="50" text-anchor="middle" font-size="22" fill="#666">Yo！滑来滑去超带感~</text>
             </svg>
         </div>
         
         <div class="section scroll-anim">
-            <div class="floating-emoji" style="bottom: 15%; left: 8%;">🎮</div>
-            <h2><span class="emoji">🧠</span> 中国 VS 美国，谁更牛？🤔</h2>
-            <p>最新调查《东南亚现状》问了2023个小伙伴，10个国家，结论超炸！💥 东南亚跟中国关系有点僵，特别是 <strong class="highlight">南中国海</strong> 的事，大家都抢地盘，菲律宾、越南、印尼都气炸了！</p>
+            <div class="floating-emoji" style="bottom: 15%; left: -10%;" data-anim-type="slide-y">🎮</div>
+            <h2><span class="emoji">🧠</span> 中国 VS 美国，谁更猛？🤔</h2>
+            <p>《东南亚现状》调查爆出，东南亚跟中国的关系有点僵！为啥？<strong class="highlight">南中国海</strong> 地盘之争！菲律宾、越南、印尼都气炸了，觉得中国想独吞！加上中国贸易超猛，东南亚除了卖资源，机会少得可怜！泰国、柬埔寨、缅甸还抱怨中国抢河水、管不好非法移民！</p>
             <ul>
-                <li>💸 中国贸易超猛，东南亚除了卖资源，基本没啥机会！</li>
-                <li>💧 泰国、柬埔寨、缅甸看中国抢河水，气得牙痒痒！</li>
-                <li>😤 非法移民问题？中国也没咋管！</li>
+                <li>💸 中国贸易霸主地位让邻国压力山大！</li>
+                <li>💧 跨境河流水资源被中国“截胡”！</li>
+                <li>😤 非法移民问题？中国好像没咋管！</li>
             </ul>
             <div class="fun-fact">
-                <p>⚡ <strong>信任危机</strong>：40%的人不信美国，觉得没啥靠谱的备胎！</p>
-                <p>🔥 <strong>欧洲？日本？印度？</strong> 规则上行，战略上？呵呵，靠边站！</p>
+                <p>⚡ <strong>信任危机</strong>：40%的人不信美国，觉得没啥靠谱备胎！</p>
+                <p>🔥 <strong>其他玩家</strong>：欧洲、印度、日本？规则上行，战略上差点意思！</p>
             </div>
-            <svg class="scroll-svg" width="120" height="120" style="bottom: 0; left: 0;">
+            <svg class="scroll-svg" width="120" height="120" style="bottom: 0; left: -120px;" data-anim-type="rotate">
                 <rect x="10" y="10" width="100" height="100" fill="#66ccff" class="color-shift" opacity="0.5"/>
             </svg>
         </div>
         
         <div class="svg-container">
             <svg viewBox="0 0 600 250" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="100" cy="125" r="50" fill="#ff9966" class="scroll-svg"/>
-                <circle cx="300" cy="125" r="50" fill="#99cc66" class="scroll-svg"/>
-                <circle cx="500" cy="125" r="50" fill="#9966cc" class="scroll-svg"/>
+                <circle cx="100" cy="125" r="50" fill="#ff9966" class="scroll-svg" data-anim-type="scale"/>
+                <circle cx="300" cy="125" r="50" fill="#99cc66" class="scroll-svg" data-anim-type="slide-x"/>
+                <circle cx="500" cy="125" r="50" fill="#9966cc" class="scroll-svg" data-anim-type="slide-y"/>
                 <text x="300" y="200" text-anchor="middle" font-size="22" fill="#666">圆圈跳舞！超嗨！</text>
             </svg>
         </div>
         
         <div class="section scroll-anim">
-            <div class="floating-emoji" style="top: 10%; right: 5%;">🚀</div>
-            <h2><span class="emoji">⚔️</span> 贸易战！谁是老大？💪</h2>
-            <p>特朗普挥舞 <strong class="highlight">关税大棒</strong>，想干翻中国经济！中国硬刚回去，欧洲？夹在中间瑟瑟发抖！😅 东南亚小伙伴说：“好邻居比远方朋友强！”</p>
+            <div class="floating-emoji" style="top: 10%; right: -10%;" data-anim-type="scale">🚀</div>
+            <h2><span class="emoji">⚔️</span> 贸易战！谁能笑到最后？💪</h2>
+            <p>特朗普挥舞 <strong class="highlight">关税大棒</strong>，想压住中国经济！中国硬刚回去，欧洲？被夹在中间慌得一批！😅 调查显示，东南亚小伙伴更倾向“好邻居胜过远方朋友”！40%的人认为中国最有影响力，30%选美国，欧盟？不到10%！</p>
             <ul>
-                <li>📊 40%的人觉得中国最有影响力，30%选美国，欧盟？不到10%！</li>
-                <li>🛑 如果中美真打起来？东南亚想 <strong class="highlight">中立</strong>！</li>
-                <li>🇷🇺 中国帮俄罗斯？东南亚：无所谓！</li>
-                <li>🇹🇼 台湾被吞？东南亚：睡得香！</li>
+                <li>📊 中国影响力：40%，美国：30%，欧盟：不到10%！</li>
+                <li>🛑 中美冲突？东南亚想保持 <strong class="highlight">中立</strong>！</li>
             </ul>
-            <svg class="scroll-svg" width="140" height="140" style="top: 0; left: 0;">
+            <svg class="scroll-svg" width="140" height="140" style="top: 0; left: -140px;" data-anim-type="slide-x">
                 <path d="M20,120 C60,40 100,40 120,120" fill="none" stroke="#ffcc00" stroke-width="10" opacity="0.5" class="color-shift"/>
             </svg>
         </div>
         
         <div class="svg-container">
             <svg viewBox="0 0 600 250" xmlns="http://www.w3.org/2000/svg">
-                <rect x="100" y="100" width="80" height="80" fill="#ff6666" class="scroll-svg"/>
-                <rect x="260" y="100" width="80" height="80" fill="#66ccff" class="scroll-svg"/>
-                <rect x="420" y="100" width="80" height="80" fill="#ffcc00" class="scroll-svg"/>
+                <rect x="100" y="100" width="80" height="80" fill="#ff6666" class="scroll-svg" data-anim-type="rotate"/>
+                <rect x="260" y="100" width="80" height="80" fill="#66ccff" class="scroll-svg" data-anim-type="slide-y"/>
+                <rect x="420" y="100" width="80" height="80" fill="#ffcc00" class="scroll-svg" data-anim-type="scale"/>
                 <text x="300" y="220" text-anchor="middle" font-size="22" fill="#666">方块蹦跶！超带劲！</text>
             </svg>
         </div>
         
         <div class="section scroll-anim">
-            <h2><span class="emoji">🎉</span> 东南亚的未来咋整？🔥</h2>
-            <p>东南亚小伙伴超希望自己能 <strong class="highlight">抱团取暖</strong>，但感觉有点悬！😓 中国没啥真盟友，军事上也难搞，但邻国也不敢真跟它对着干！</p>
-            <p>Yo！不管咋样，东南亚的少年们，保持中立，灵活走位，未来你们说了算！💪</p>
+            <h2><span class="emoji">🎉</span> 东南亚的未来在哪？🔥</h2>
+            <p>调查里，东南亚小伙伴超希望 <strong class="highlight">抱团取暖</strong>，但觉得这事不太好办！😓 如果中美真打起来，东南亚更想保持中立！</p>
+            <p>Yo！东南亚的少年们，灵活走位，未来你们来定！💪</p>
             <div style="text-align: center; margin-top: 30px;">
                 <span style="font-size: 3.5rem;">✨</span>
                 <span style="font-size: 4.5rem;">🌟</span>
                 <span style="font-size: 3.5rem;">✨</span>
             </div>
-            <svg class="scroll-svg" width="160" height="160" style="bottom: 0; right: 0;">
+            <svg class="scroll-svg" width="160" height="160" style="bottom: 0; right: -160px;" data-anim-type="slide-y">
                 <polygon points="80,20 140,80 80,140 20,80" fill="#9966cc" class="color-shift" opacity="0.5"/>
             </svg>
         </div>
@@ -232,22 +234,53 @@
         let scrollTimeout;
         let currentTransform = { svgs: {}, emojis: {} };
 
-        // Initialize transform storage
-        svgs.forEach(svg => currentTransform.svgs[svg.outerHTML] = { translateY: 0, rotate: 0 });
-        emojis.forEach(emoji => currentTransform.emojis[emoji.textContent + emoji.style.left] = { translateY: 0 });
+        // Initialize transform storage with unique IDs
+        svgs.forEach((svg, index) => {
+            currentTransform.svgs[`svg-${index}`] = {
+                baseValue: parseFloat(svg.style.left || svg.style.right || 0),
+                scrollValue: 0,
+                type: svg.dataset.animType,
+                isLeft: svg.style.left !== ''
+            };
+        });
+        emojis.forEach((emoji, index) => {
+            currentTransform.emojis[`emoji-${index}`] = {
+                baseValue: parseFloat(emoji.style.left || emoji.style.right || 0),
+                scrollValue: 0,
+                type: emoji.dataset.animType,
+                isLeft: emoji.style.left !== ''
+            };
+        });
 
         window.addEventListener('scroll', () => {
             const scrollY = window.scrollY;
+            const scrollDelta = scrollY - lastScrollY; // Track scroll direction
             isScrolling = true;
             clearTimeout(scrollTimeout);
 
-            // Smoothly update SVG and emoji positions
-            svgs.forEach(svg => {
-                const translateY = scrollY * 0.1;
-                const rotate = translateY * 0.05;
-                svg.style.transform = `translateY(${translateY}px) rotate(${rotate}deg)`;
-                currentTransform.svgs[svg.outerHTML] = { translateY, rotate };
-                
+            // Update SVG animations
+            svgs.forEach((svg, index) => {
+                const transformData = currentTransform.svgs[`svg-${index}`];
+                const { baseValue, type, isLeft } = transformData;
+                const direction = isLeft ? 1 : -1;
+                let transformValue = transformData.scrollValue + (scrollDelta * (type === 'slide-x' && Math.random() < 0.2 ? 0.5 : 0.3) * direction);
+
+                // Apply different animation types
+                if (type === 'slide-x') {
+                    svg.style.transform = `translateX(${transformValue}px)`;
+                } else if (type === 'slide-y') {
+                    transformValue = transformData.scrollValue + (scrollDelta * 0.2 * direction);
+                    svg.style.transform = `translateY(${transformValue}px)`;
+                } else if (type === 'rotate') {
+                    transformValue = transformData.scrollValue + (scrollDelta * 0.1 * direction);
+                    svg.style.transform = `rotate(${transformValue}deg)`;
+                } else if (type === 'scale') {
+                    transformValue = 1 + (scrollY * 0.0005 * direction);
+                    svg.style.transform = `scale(${transformValue})`;
+                }
+
+                currentTransform.svgs[`svg-${index}`].scrollValue = transformValue;
+
                 // Smooth color gradient
                 const hue = (scrollY % 360);
                 svg.querySelectorAll('.color-shift').forEach(el => {
@@ -255,57 +288,81 @@
                 });
             });
 
-            emojis.forEach(emoji => {
-                const translateY = scrollY * 0.2;
-                emoji.style.transform = `translateY(${translateY}px)`;
-                currentTransform.emojis[emoji.textContent + emoji.style.left] = { translateY };
+            // Update emoji animations
+            emojis.forEach((emoji, index) => {
+                const transformData = currentTransform.emojis[`emoji-${index}`];
+                const { baseValue, type, isLeft } = transformData;
+                const direction = isLeft ? 1 : -1;
+                let transformValue = transformData.scrollValue + (scrollDelta * (type === 'slide-x' && Math.random() < 0.2 ? 0.5 : 0.3) * direction);
+
+                if (type === 'slide-x') {
+                    emoji.style.transform = `translateX(${transformValue}px)`;
+                } else if (type === 'slide-y') {
+                    transformValue = transformData.scrollValue + (scrollDelta * 0.2 * direction);
+                    emoji.style.transform = `translateY(${transformValue}px)`;
+                } else if (type === 'rotate') {
+                    transformValue = transformData.scrollValue + (scrollDelta * 0.1 * direction);
+                    emoji.style.transform = `rotate(${transformValue}deg)`;
+                } else if (type === 'scale') {
+                    transformValue = 1 + (scrollY * 0.0005 * direction);
+                    emoji.style.transform = `scale(${transformValue})`;
+                }
+
+                currentTransform.emojis[`emoji-${index}`].scrollValue = transformValue;
             });
 
             // Detect when scrolling stops
             scrollTimeout = setTimeout(() => {
                 isScrolling = false;
-                // Smoothly reset transforms
-                svgs.forEach(svg => {
-                    svg.style.transition = 'transform 0.3s ease-out';
-                    svg.style.transform = `translateY(0) rotate(0deg)`;
-                    currentTransform.svgs[svg.outerHTML] = { translateY: 0, rotate: 0 };
+                // Smoothly reset transforms to initial positions
+                svgs.forEach((svg, index) => {
+                    svg.style.transition = 'transform 0.6s ease-out';
+                    svg.style.transform = `translateX(0) translateY(0) rotate(0deg) scale(1)`;
+                    currentTransform.svgs[`svg-${index}`].scrollValue = 0;
                 });
-                emojis.forEach(emoji => {
-                    emoji.style.transition = 'transform 0.3s ease-out';
-                    emoji.style.transform = `translateY(0)`;
-                    currentTransform.emojis[emoji.textContent + emoji.style.left] = { translateY: 0 };
+                emojis.forEach((emoji, index) => {
+                    emoji.style.transition = 'transform 0.6s ease-out';
+                    emoji.style.transform = `translateX(0) translateY(0) rotate(0deg) scale(1)`;
+                    currentTransform.emojis[`emoji-${index}`].scrollValue = 0;
                 });
                 // Restore transition timing
                 setTimeout(() => {
                     svgs.forEach(svg => {
-                        svg.style.transition = 'transform 0.2s ease-out, fill 0.5s ease-out';
+                        svg.style.transition = 'transform 0.4s ease-out, fill 0.8s ease-out';
                     });
                     emojis.forEach(emoji => {
-                        emoji.style.transition = 'transform 0.2s ease-out';
+                        emoji.style.transition = 'transform 0.4s ease-out';
                     });
-                }, 300);
-            }, 150);
+                }, 600);
+            }, 200);
 
             lastScrollY = scrollY;
-        }, { passive: true }); // Optimize for iOS
+        }, { passive: true }); // Optimize for iOS/Android
 
         // 随机漂浮表情
         function createFloatingEmoji() {
             const emojis = ['🐶', '🐱', '🐼', '🦄', '🐙', '🦊', '🐧', '🦖', '👾', '🤖', '🎮', '🍕', '🍔', '🍦'];
+            const animTypes = ['slide-x', 'slide-y', 'rotate', 'scale'];
             const emoji = document.createElement('div');
             emoji.className = 'floating-emoji';
             emoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+            emoji.dataset.animType = animTypes[Math.floor(Math.random() * animTypes.length)];
             
             const size = Math.random() * 2 + 1.5;
             emoji.style.fontSize = `${size}rem`;
             
-            const left = Math.random() * 80 + 10;
-            const top = Math.random() * 80 + 10;
-            emoji.style.left = `${left}%`;
-            emoji.style.top = `${top}%`;
+            const isLeft = Math.random() > 0.5;
+            const pos = -10; // Start off-screen
+            emoji.style[isLeft ? 'left' : 'right'] = `${pos}%`;
+            emoji.style.top = `${Math.random() * 80 + 10}%`;
             
             document.querySelector('.container').appendChild(emoji);
-            currentTransform.emojis[emoji.textContent + emoji.style.left] = { translateY: 0 };
+            currentTransform.emojis[`emoji-${Object.keys(currentTransform.emojis).length}`] = {
+                baseValue: pos,
+                scrollValue: 0,
+                type: emoji.dataset.animType,
+                isLeft
+            };
         }
         
         for (let i = 0; i < 12; i++) {
